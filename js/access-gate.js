@@ -6,7 +6,7 @@
 // who opens the link from seeing the app at all.
 //
 // ⚠️ CHANGE THIS CODE before sharing the link with your family.
-const ACCESS_CODE = "1234";
+const ACCESS_CODE = "3454";
 
 // Remembers the unlock for this browser tab/session only — closing the
 // app (or the browser) will ask for the code again next time.
