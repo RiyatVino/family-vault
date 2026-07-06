@@ -2,18 +2,17 @@
 // Caches the entire app shell so the app works with zero network connectivity
 // after the first successful install/visit.
 
-const CACHE_VERSION = "family-vault-v1";
+const CACHE_VERSION = "family-vault-v3";
 const APP_SHELL = [
   "./",
   "./index.html",
   "./manifest.json",
   "./css/style.css",
+  "./js/access-gate.js",
   "./js/db.js",
   "./js/crypto.js",
   "./js/zip-share.js",
-  "./js/qr.js",
   "./js/app.js",
-  "./vendor/qrcode.js",
   "./vendor/fflate.js",
   "./icons/icon-192.png",
   "./icons/icon-512.png",

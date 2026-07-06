@@ -4,8 +4,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
 <title>Family Vault — Document Manager</title>
-<meta name="description" content="Offline-first family document vault. Store, organize, search and instantly share every family document, entirely on your device." />
-<meta name="theme-color" content="#1F3D34" />
+<meta name="description" content="Offline-first family document vault. Store each family member's documents and share them instantly, entirely on your device." />
+<meta name="theme-color" content="#3A6FF0" />
 <link rel="manifest" href="manifest.json" />
 <link rel="icon" href="icons/icon-192.png" />
 <link rel="apple-touch-icon" href="icons/icon-192.png" />
@@ -15,41 +15,34 @@
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<div id="app">
-  <div id="lockscreen-root"></div>
+<div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
 
+<div id="access-gate-root"></div>
+
+<div id="app">
   <header class="topbar" id="topbar" hidden>
     <div>
       <div class="eyebrow" id="topbar-eyebrow">Family Vault</div>
-      <h1 id="topbar-title">Home</h1>
+      <h1 id="topbar-title">Family</h1>
     </div>
     <div class="topbar-actions">
       <button class="icon-btn" id="btn-theme" title="Toggle dark mode">🌙</button>
-      <button class="icon-btn" id="btn-lock" title="Lock vault">🔒</button>
     </div>
   </header>
 
   <main id="view" hidden></main>
 
-  <button class="fab" id="fab-add" title="Add document" hidden>+</button>
-
-  <nav class="bottomnav" id="bottomnav" hidden>
-    <button data-tab="home" class="active"><span class="ic">🏠</span>Home</button>
-    <button data-tab="members"><span class="ic">👪</span>Family</button>
-    <button data-tab="search"><span class="ic">🔎</span>Search</button>
-    <button data-tab="settings"><span class="ic">⚙️</span>Vault</button>
-  </nav>
+  <button class="fab" id="fab-add" title="Add" hidden>+</button>
 
   <div id="sheet-root"></div>
   <div class="toast" id="toast"></div>
 </div>
 
-<script src="vendor/qrcode.js"></script>
+<script src="js/access-gate.js"></script>
 <script src="vendor/fflate.js"></script>
 <script src="js/db.js"></script>
 <script src="js/crypto.js"></script>
 <script src="js/zip-share.js"></script>
-<script src="js/qr.js"></script>
 <script src="js/app.js"></script>
 <script>
   if ("serviceWorker" in navigator) {
